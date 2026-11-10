@@ -1,0 +1,232 @@
+{
+  "detector_threshold": 0.7413211464881897,
+  "evaluation_type": "external datasets not used in detector training, validation, or test splits",
+  "project_split_holdout_reference": {
+    "images": 616,
+    "threshold_tradeoff": [
+      {
+        "threshold": 0.7413211464881897,
+        "correct_modality_accepted": 614,
+        "wrong_modality_confident": 0
+      },
+      {
+        "threshold": 0.85,
+        "correct_modality_accepted": 614,
+        "wrong_modality_confident": 0
+      },
+      {
+        "threshold": 0.9,
+        "correct_modality_accepted": 612,
+        "wrong_modality_confident": 0
+      },
+      {
+        "threshold": 0.95,
+        "correct_modality_accepted": 612,
+        "wrong_modality_confident": 0
+      },
+      {
+        "threshold": 0.98,
+        "correct_modality_accepted": 611,
+        "wrong_modality_confident": 0
+      }
+    ]
+  },
+  "results": [
+    {
+      "source_file": "BUSI.parquet",
+      "expected_modality": "ultrasound",
+      "rows_sampled": 780,
+      "exact_duplicate_rows_removed": 1,
+      "images_overlapping_project_manifest": 0,
+      "unique_independent_images_evaluated": 779,
+      "top1_modality_accuracy": 0.9127086007702182,
+      "accepted_as_expected_at_detector_threshold": 490,
+      "rejected_or_classified_other": 286,
+      "raw_detector_classes": {
+        "other": 50,
+        "ultrasound": 711,
+        "chest_xray": 17,
+        "histopathology": 1
+      },
+      "confident_wrong_modality_examples": [
+        {
+          "sampled_row_index": 280,
+          "predicted_modality": "chest_xray",
+          "confidence": 0.7563992142677307
+        },
+        {
+          "sampled_row_index": 345,
+          "predicted_modality": "chest_xray",
+          "confidence": 0.7681350111961365
+        },
+        {
+          "sampled_row_index": 504,
+          "predicted_modality": "chest_xray",
+          "confidence": 0.8453919887542725
+        }
+      ],
+      "threshold_tradeoff": [
+        {
+          "threshold": 0.75,
+          "correct_modality_accepted": 477,
+          "wrong_modality_confident": 3,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.8,
+          "correct_modality_accepted": 396,
+          "wrong_modality_confident": 1,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.85,
+          "correct_modality_accepted": 295,
+          "wrong_modality_confident": 0,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.9,
+          "correct_modality_accepted": 189,
+          "wrong_modality_confident": 0,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.95,
+          "correct_modality_accepted": 75,
+          "wrong_modality_confident": 0,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.98,
+          "correct_modality_accepted": 10,
+          "wrong_modality_confident": 0,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.99,
+          "correct_modality_accepted": 4,
+          "wrong_modality_confident": 0,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.995,
+          "correct_modality_accepted": 1,
+          "wrong_modality_confident": 0,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.999,
+          "correct_modality_accepted": 0,
+          "wrong_modality_confident": 0,
+          "cross_supported_modality_confident": 0
+        }
+      ],
+      "confident_wrong_class_predictions": 3,
+      "cross_supported_modality_false_accepts": 0,
+      "rejected_as_chest_xray_unavailable": 3
+    },
+    {
+      "source_file": "breast-histology-test.parquet",
+      "expected_modality": "histopathology",
+      "rows_sampled": 1000,
+      "exact_duplicate_rows_removed": 0,
+      "images_overlapping_project_manifest": 0,
+      "unique_independent_images_evaluated": 1000,
+      "top1_modality_accuracy": 0.92,
+      "accepted_as_expected_at_detector_threshold": 697,
+      "rejected_or_classified_other": 299,
+      "raw_detector_classes": {
+        "histopathology": 920,
+        "other": 48,
+        "chest_xray": 25,
+        "ultrasound": 7
+      },
+      "confident_wrong_modality_examples": [
+        {
+          "sampled_row_index": 226,
+          "predicted_modality": "chest_xray",
+          "confidence": 0.8516884446144104
+        },
+        {
+          "sampled_row_index": 602,
+          "predicted_modality": "chest_xray",
+          "confidence": 0.7465307712554932
+        },
+        {
+          "sampled_row_index": 674,
+          "predicted_modality": "chest_xray",
+          "confidence": 0.9081332087516785
+        },
+        {
+          "sampled_row_index": 719,
+          "predicted_modality": "chest_xray",
+          "confidence": 0.9670055508613586
+        }
+      ],
+      "threshold_tradeoff": [
+        {
+          "threshold": 0.75,
+          "correct_modality_accepted": 689,
+          "wrong_modality_confident": 3,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.8,
+          "correct_modality_accepted": 613,
+          "wrong_modality_confident": 3,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.85,
+          "correct_modality_accepted": 512,
+          "wrong_modality_confident": 3,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.9,
+          "correct_modality_accepted": 366,
+          "wrong_modality_confident": 2,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.95,
+          "correct_modality_accepted": 180,
+          "wrong_modality_confident": 1,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.98,
+          "correct_modality_accepted": 52,
+          "wrong_modality_confident": 0,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.99,
+          "correct_modality_accepted": 21,
+          "wrong_modality_confident": 0,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.995,
+          "correct_modality_accepted": 6,
+          "wrong_modality_confident": 0,
+          "cross_supported_modality_confident": 0
+        },
+        {
+          "threshold": 0.999,
+          "correct_modality_accepted": 1,
+          "wrong_modality_confident": 0,
+          "cross_supported_modality_confident": 0
+        }
+      ],
+      "confident_wrong_class_predictions": 4,
+      "cross_supported_modality_false_accepts": 0,
+      "rejected_as_chest_xray_unavailable": 4
+    }
+  ],
+  "limitations": [
+    "BUSI includes known source quality caveats and does not represent all ultrasound devices.",
+    "The histology test split contains 50x50 patches, not whole-slide pathology images.",
+    "This evaluation tests modality recognition only, not cancer classifier accuracy."
+  ]
+}

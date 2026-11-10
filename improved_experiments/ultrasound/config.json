@@ -1,0 +1,16 @@
+{
+  "modality": "ultrasound",
+  "dataset_root": "C:\\Users\\asus\\OneDrive\\Desktop\\Breast Cncer Project\\MultiModel Breast Cancer MSI Dataset",
+  "saved_split_assignment": "C:\\Users\\asus\\OneDrive\\Desktop\\Breast Cncer Project\\msi_results_full\\ultrasound_splits.csv",
+  "architecture": "ResNet-18 pretrained on ImageNet",
+  "training_change": "learning rate reduced from 1e-3 to 5e-4 with same architecture, same saved split, same test set untouched",
+  "epochs": 12,
+  "freeze_epochs": 3,
+  "patience": 3,
+  "batch_size": 16,
+  "image_size": 224,
+  "seed": 42,
+  "validation_metric": "macro_f1",
+  "test_set_touched": false,
+  "notes": "One conservative LR-tuning experiment only; model selection by validation Macro F1; no threshold tuning on test set."
+}

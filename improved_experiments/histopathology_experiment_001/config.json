@@ -1,0 +1,18 @@
+{
+  "modality": "histopathology",
+  "dataset_root": "c:\\Users\\asus\\OneDrive\\Desktop\\Breast Cncer Project\\MultiModel Breast Cancer MSI Dataset",
+  "split_strategy": "group-aware 70/15/15 by slide group",
+  "architecture": "ResNet-18 pretrained on ImageNet",
+  "learning_rate": 0.0005,
+  "freeze_epochs": 2,
+  "epochs": 8,
+  "patience": 3,
+  "batch_size": 16,
+  "size": 224,
+  "seed": 42,
+  "augmentation_limited_to_training": true,
+  "validation_metric": "macro_f1",
+  "checkpoint_selection": "best validation macro F1",
+  "test_set_used_for_final_evaluation_only": true,
+  "notes": "Single approved histopathology experiment; original baseline files preserved."
+}

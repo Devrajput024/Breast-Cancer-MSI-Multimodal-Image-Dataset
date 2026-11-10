@@ -1,0 +1,22 @@
+{
+  "baseline_accuracy": 0.8614457831325302,
+  "new_accuracy": 0.8373493975903614,
+  "accuracy_delta": -0.024096385542168752,
+  "baseline_macro_f1": 0.8608347002004738,
+  "new_macro_f1": 0.8351902923331496,
+  "macro_f1_delta": -0.025644407867324248,
+  "baseline_malignant_precision": 0.8369565217391305,
+  "new_malignant_precision": 0.967741935483871,
+  "malignant_precision_delta": 0.1307854137447405,
+  "baseline_malignant_recall": 0.9058823529411765,
+  "new_malignant_recall": 0.7058823529411765,
+  "malignant_recall_delta": -0.19999999999999996,
+  "baseline_specificity": 0.8148148148148148,
+  "new_specificity": 0.9753086419753086,
+  "specificity_delta": 0.16049382716049387,
+  "baseline_roc_auc": 0.9089324618736383,
+  "new_roc_auc": 0.9497458242556283,
+  "roc_auc_delta": 0.04081336238198996,
+  "selected_model": "original baseline retained",
+  "fairness_note": "The test set was not used for model selection or threshold tuning; all decisions used validation Macro F1 only."
+}

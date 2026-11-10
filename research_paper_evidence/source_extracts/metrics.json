@@ -1,0 +1,107 @@
+{
+  "modality": "ultrasound",
+  "best_epoch": 8,
+  "n_train": 512,
+  "n_validation": 128,
+  "n_test": 166,
+  "split_method": "saved group-aware split from ultrasound_splits.csv",
+  "test_loss": 0.5344364028917125,
+  "test_accuracy": 0.8373493975903614,
+  "test_macro_f1": 0.8351902923331496,
+  "malignant_precision": 0.967741935483871,
+  "malignant_sensitivity_recall": 0.7058823529411765,
+  "specificity_class0": 0.9753086419753086,
+  "roc_auc": 0.9497458242556283,
+  "confusion_matrix_labels_class0_then_malignant": [
+    [
+      79,
+      2
+    ],
+    [
+      25,
+      60
+    ]
+  ],
+  "classification_report": {
+    "benign": {
+      "precision": 0.7596153846153846,
+      "recall": 0.9753086419753086,
+      "f1-score": 0.8540540540540541,
+      "support": 81.0
+    },
+    "malignant": {
+      "precision": 0.967741935483871,
+      "recall": 0.7058823529411765,
+      "f1-score": 0.8163265306122449,
+      "support": 85.0
+    },
+    "accuracy": 0.8373493975903614,
+    "macro avg": {
+      "precision": 0.8636786600496278,
+      "recall": 0.8405954974582426,
+      "f1-score": 0.8351902923331496,
+      "support": 166.0
+    },
+    "weighted avg": {
+      "precision": 0.8661862088552722,
+      "recall": 0.8373493975903614,
+      "f1-score": 0.8347357438579469,
+      "support": 166.0
+    }
+  },
+  "checkpoint_path": "C:\\Users\\asus\\OneDrive\\Desktop\\Breast Cncer Project\\improved_experiments\\ultrasound\\best_checkpoint.pt",
+  "baseline_metrics_for_reference": {
+    "modality": "ultrasound",
+    "n_images": 806,
+    "n_train": 512,
+    "n_validation": 128,
+    "n_test": 166,
+    "split_method": "group-aware split using augmentation-normalized source groups",
+    "test_accuracy": 0.8614457831325302,
+    "test_macro_f1": 0.8608347002004738,
+    "malignant_precision": 0.8369565217391305,
+    "malignant_sensitivity_recall": 0.9058823529411765,
+    "specificity_class0": 0.8148148148148148,
+    "roc_auc": 0.9089324618736383,
+    "confusion_matrix_labels_class0_then_malignant": [
+      [
+        66,
+        15
+      ],
+      [
+        8,
+        77
+      ]
+    ],
+    "classification_report": {
+      "class_0": {
+        "precision": 0.8918918918918919,
+        "recall": 0.8148148148148148,
+        "f1-score": 0.8516129032258064,
+        "support": 81.0
+      },
+      "malignant": {
+        "precision": 0.8369565217391305,
+        "recall": 0.9058823529411765,
+        "f1-score": 0.8700564971751412,
+        "support": 85.0
+      },
+      "accuracy": 0.8614457831325302,
+      "macro avg": {
+        "precision": 0.8644242068155112,
+        "recall": 0.8603485838779956,
+        "f1-score": 0.8608347002004738,
+        "support": 166.0
+      },
+      "weighted avg": {
+        "precision": 0.8637623348859599,
+        "recall": 0.8614457831325302,
+        "f1-score": 0.861056912175767,
+        "support": 166.0
+      }
+    }
+  },
+  "selection_criterion": "validation_macro_f1",
+  "test_set_untouched_until_final_evaluation": true,
+  "disclaimer": "Research and education only. Not a clinically validated diagnostic tool."
+}

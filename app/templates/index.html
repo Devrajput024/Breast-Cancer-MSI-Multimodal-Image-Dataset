@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breast Cancer Image Classification</title>
+    <meta name="description" content="Research dashboard for ultrasound and histopathology breast cancer classification models." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">BC</div>
+        <div>
+          <div class="eyebrow">Research Dashboard</div>
+          <h1>Breast Cancer Image Classification</h1>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#classify">Classify</a>
+        <a href="#models">Models</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero card">
+        <div class="hero-copy">
+          <p class="eyebrow accent">Medical AI Research</p>
+          <h2>High-level classification dashboard for preserved breast cancer imaging models.</h2>
+          <p>
+            This dashboard connects the project’s preserved baseline checkpoints for ultrasound and histopathology image classification.
+            It is intended for research and educational review only and does not constitute clinical diagnosis or medical advice.
+          </p>
+          <div class="hero-badges">
+            <span>Ultrasound baseline</span>
+            <span>Histopathology baseline</span>
+            <span>Research use only</span>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="stat">
+            <span class="label">Available models</span>
+            <strong id="model-count">2</strong>
+          </div>
+          <div class="stat">
+            <span class="label">Approach</span>
+            <strong>ResNet-18</strong>
+          </div>
+          <div class="stat">
+            <span class="label">Status</span>
+            <strong>Research-only</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="classify" class="panel-grid">
+        <div class="card classify-card">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow accent">Image classification</p>
+              <h3>Upload an image</h3>
+            </div>
+          </div>
+
+          <form id="upload-form" class="upload-form">
+            <label class="field-label" for="modality-select">Modality</label>
+            <select id="modality-select" name="modality">
+              <option value="ultrasound">Ultrasound</option>
+              <option value="histopathology">Histopathology</option>
+            </select>
+
+            <div id="upload-zone" class="upload-zone" tabindex="0" aria-label="Image upload area">
+              <input id="image-input" type="file" accept="image/png,image/jpeg,image/webp,image/bmp,image/tiff,image/tif" />
+              <div class="upload-copy">
+                <strong>Drag & drop image here</strong>
+                <span>or</span>
+                <button type="button" class="secondary-button" id="browse-button">Browse files</button>
+              </div>
+            </div>
+
+            <div class="upload-actions">
+              <button type="submit" class="primary-button" id="predict-button">Run prediction</button>
+              <button type="button" class="secondary-button muted" id="clear-button">Remove image</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card result-card">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow accent">Prediction results</p>
+              <h3>Model output</h3>
+            </div>
+          </div>
+
+          <div id="result-empty" class="empty-state">
+            <p>No image selected yet.</p>
+          </div>
+
+          <div id="result-panel" class="result-panel hidden">
+            <div class="preview-box">
+              <img id="preview-image" alt="Uploaded preview" />
+            </div>
+            <div class="result-metrics">
+              <div class="metric-row"><span>Modality</span><strong id="result-modality">—</strong></div>
+              <div class="metric-row"><span>Predicted class</span><strong id="result-class">—</strong></div>
+              <div class="metric-row"><span>Model confidence</span><strong id="result-confidence">—</strong></div>
+            </div>
+            <div id="result-error" class="alert hidden"></div>
+            <div id="result-note" class="fine-print"></div>
+            <button id="another-image-button" type="button" class="secondary-button">Analyse another image</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="models" class="card section-card">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow accent">Model information</p>
+            <h3>Preserved baseline models and limitations</h3>
+          </div>
+        </div>
+        <div id="model-list" class="model-grid"></div>
+      </section>
+
+      <section id="about" class="card section-card">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow accent">About the project</p>
+            <h3>Workflow, technologies, and limits</h3>
+          </div>
+        </div>
+        <div class="about-grid">
+          <article>
+            <h4>Technologies</h4>
+            <ul>
+              <li>Python 3.11 and PyTorch</li>
+              <li>torchvision ResNet-18 transfer learning</li>
+              <li>FastAPI backend + static HTML/CSS/JS frontend</li>
+              <li>Pillow, NumPy, pandas, scikit-learn</li>
+            </ul>
+          </article>
+          <article>
+            <h4>Project workflow</h4>
+            <ul>
+              <li>Validate dataset integrity and inspect split leakage risks</li>
+              <li>Train with group-aware splits and save preserved checkpoints</li>
+              <li>Evaluate on held-out test sets and record metrics</li>
+              <li>Serve the original baselines through a research dashboard</li>
+            </ul>
+          </article>
+          <article>
+            <h4>Research limitations</h4>
+            <ul>
+              <li>Models are not clinically validated</li>
+              <li>Cross-modality comparison is not a clinical diagnosis workflow</li>
+              <li>Performance must be interpreted in a research context only</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Research use only. Not a clinical diagnostic system.</p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

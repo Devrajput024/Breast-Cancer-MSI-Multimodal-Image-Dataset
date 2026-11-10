@@ -1,0 +1,31 @@
+﻿# Python environments and caches
+.venv/
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local datasets and generated dataset indexes (contain local file paths)
+datasets/
+MultiModel Breast Cancer MSI Dataset/
+dataset_manifests/
+**/*manifest*.csv
+**/*splits.csv
+
+# Trained model binaries and generated run output
+*.pt
+*.pth
+*.ckpt
+outputs/
+smoke_test_outputs/
+evaluation_results/
+msi_results_*/
+msi_feature_audit/**/gradcam/
+
+# Local editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

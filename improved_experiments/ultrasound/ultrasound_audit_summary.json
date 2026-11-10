@@ -1,0 +1,50 @@
+{
+  "dataset": {
+    "modality": "ultrasound",
+    "images": 806,
+    "classes": {
+      "benign": 406,
+      "malignant": 400
+    },
+    "unique_groups": 50,
+    "exact_duplicate_images": 53,
+    "exact_duplicate_groups": 18,
+    "perceptual_duplicate_images": 87,
+    "perceptual_duplicate_groups": 25
+  },
+  "split_distribution": {
+    "train": 512,
+    "test": 166,
+    "validation": 128
+  },
+  "duplicates_by_split": {
+    "exact": {
+      "train": 35,
+      "test": 12,
+      "validation": 6
+    },
+    "perceptual": {
+      "train": 55,
+      "test": 21,
+      "validation": 11
+    }
+  },
+  "cross_split_exact_md5_hashes": 0,
+  "cross_split_perceptual_dhashes": 0,
+  "cross_split_source_ids": 0,
+  "cross_split_group_ids": 0,
+  "checkpoint": {
+    "arch": "ResNet-18",
+    "class_map": {
+      "benign": 0,
+      "malignant": 1
+    },
+    "image_size": 224,
+    "best_val_macro_f1": null
+  },
+  "baseline_metrics": {
+    "test_accuracy": 0.8614457831325302,
+    "test_macro_f1": 0.8608347002004738,
+    "roc_auc": 0.9089324618736383
+  }
+}

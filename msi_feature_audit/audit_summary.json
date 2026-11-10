@@ -1,0 +1,14 @@
+{
+  "audit_root": "C:\\Users\\asus\\OneDrive\\Desktop\\Breast Cncer Project\\msi_feature_audit",
+  "modalities_processed": [
+    "ultrasound",
+    "histopathology",
+    "chest_xray"
+  ],
+  "device": "cuda",
+  "notes": [
+    "Grad-CAM is used only as a saliency visualization aid and does not prove medically correct feature usage.",
+    "Masking tests are sensitivity checks only; they do not establish causal mechanism.",
+    "The chest X-ray dataset appears to include synthetic or transformed examples and should be investigated before additional expensive training."
+  ]
+}

@@ -1,0 +1,5 @@
+# Interpretability and audits
+
+`msi_feature_audit` contains Grad-CAM overlays/summaries and masking summaries for ultrasound, histopathology and chest X-ray. `audit_review/report.md` records qualitative ultrasound activations sometimes near backgrounds/borders and tissue-like histopathology patterns. Inspect copied/source images before using examples in a paper; these observations do not prove medically correct focus. Masking CSVs measure output sensitivity to perturbation, not causal feature importance.
+
+Duplicate/split audit: see `audit_review/split_integrity_summary.csv`, manifests and validation summary. Ultrasound has many transformed duplicates and only 50 filename-derived groups; histopathology has 51 slide-like groups with no detected duplicates. No direct patient identifiers are available, so neither confirms patient-level leakage exclusion. `msi_feature_audit/validation_only_model_comparison.csv` is validation-only and must not be presented as test evidence. Feature audit JSON explicitly cautions against causal/medical interpretation.

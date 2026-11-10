@@ -1,0 +1,7 @@
+dataset,duplicate_type,total_count,notes
+ultrasound,exact_duplicates,53,Duplicate rows cluster by source stem and transformed variants; likely source-related duplicates rather than independent images.
+ultrasound,perceptual_duplicates,87,Perceptual duplicates occur in the same source family and are consistent with rotated/sharpened variants.
+histopathology,exact_duplicates,0,No exact duplicate images identified in the saved manifest.
+histopathology,perceptual_duplicates,0,No perceptual duplicates identified in the saved manifest.
+chest_xray,exact_duplicates,0,Exact duplicates not found in the saved validation summary.
+chest_xray,perceptual_duplicates,113,Perceptual duplicates reported in the validation summary; dataset remains exploratory and not clinically validated.

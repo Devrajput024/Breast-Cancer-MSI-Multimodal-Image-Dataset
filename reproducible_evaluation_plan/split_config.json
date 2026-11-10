@@ -1,0 +1,59 @@
+{
+  "dataset_manifest": "c:\\Users\\asus\\OneDrive\\Desktop\\Breast Cncer Project\\dataset_manifests\\histopathology_manifest.csv",
+  "manifest_sha256": "a78b94d0384115d02fe348f7a7bb73e086946ef637e2636ad0d11903b1019a06",
+  "modality": "histopathology",
+  "group_key": "source_id",
+  "group_definition": "filename-derived slide/specimen prefix such as Multispectral_SOB_B_A-14-22549AB",
+  "grouping_evidence": {
+    "manifest_unique_source_ids": 51,
+    "manifest_unique_group_ids": 51,
+    "total_images": 1246,
+    "class_distribution": {
+      "benign": 623,
+      "malignant": 623
+    }
+  },
+  "split_strategy": {
+    "method": "per-class GroupShuffleSplit by source_id",
+    "seed": 42,
+    "validation_seed": 43,
+    "target_ratios": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "class_balance": "per-class group split before concatenation"
+  },
+  "split_counts": {
+    "train": {
+      "total": 845,
+      "benign": 449,
+      "malignant": 396
+    },
+    "validation": {
+      "total": 237,
+      "benign": 98,
+      "malignant": 139
+    },
+    "test": {
+      "total": 164,
+      "benign": 76,
+      "malignant": 88
+    }
+  },
+  "duplicate_and_group_leakage_check": {
+    "exact_duplicate_paths": false,
+    "source_overlap_between_splits": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0
+    },
+    "all_source_ids_unique_across_splits": true,
+    "any_group_in_multiple_splits": false
+  },
+  "limitations": [
+    "source_id is the strongest available slide/specimen grouping signal in the preserved manifest, but it is not a separate explicit patient identifier file.",
+    "The available evidence supports slide-level grouping, not confirmed patient-level independence.",
+    "No model training or checkpoint evaluation is performed in this reproducibility setup."
+  ]
+}

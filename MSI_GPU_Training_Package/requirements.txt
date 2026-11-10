@@ -1,0 +1,11 @@
+# MSI Breast Cancer ResNet-18 Classification Requirements
+# For Windows with NVIDIA GPU (e.g. RTX 4050), install PyTorch with CUDA 12.1/12.4 via pytorch.org first:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
+torch>=2.0.0
+torchvision>=0.15.0
+scikit-learn>=1.2.0
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+Pillow>=9.5.0

@@ -1,0 +1,57 @@
+{
+  "modality": "histopathology",
+  "best_epoch": 7,
+  "n_images_total": 1246,
+  "n_train": 815,
+  "n_validation": 217,
+  "n_test": 214,
+  "split_method": "Group-aware 70/15/15 stratified split using source/patient groups",
+  "positive_class": "malignant",
+  "positive_label": 1,
+  "test_loss": 0.8599509624677284,
+  "test_accuracy": 0.6588785046728972,
+  "test_macro_f1": 0.651566856250697,
+  "malignant_sensitivity_recall": 0.5584415584415584,
+  "malignant_precision": 0.945054945054945,
+  "specificity_class0": 0.9166666666666666,
+  "roc_auc": 0.8190476190476191,
+  "confusion_matrix": [
+    [
+      55,
+      5
+    ],
+    [
+      68,
+      86
+    ]
+  ],
+  "classification_report": {
+    "benign": {
+      "precision": 0.44715447154471544,
+      "recall": 0.9166666666666666,
+      "f1-score": 0.6010928961748634,
+      "support": 60.0
+    },
+    "malignant": {
+      "precision": 0.945054945054945,
+      "recall": 0.5584415584415584,
+      "f1-score": 0.7020408163265306,
+      "support": 154.0
+    },
+    "accuracy": 0.6588785046728972,
+    "macro avg": {
+      "precision": 0.6961047082998302,
+      "recall": 0.7375541125541125,
+      "f1-score": 0.651566856250697,
+      "support": 214.0
+    },
+    "weighted avg": {
+      "precision": 0.8054566814539461,
+      "recall": 0.6588785046728972,
+      "f1-score": 0.6737376611438202,
+      "support": 214.0
+    }
+  },
+  "checkpoint_path": "C:\\Users\\asus\\OneDrive\\Desktop\\Breast Cncer Project\\improved_experiments\\histopathology_experiment_001\\histopathology_best_resnet18.pt",
+  "disclaimer": "Research and education only. Does not establish clinical validity."
+}

@@ -1,0 +1,3 @@
+# Citation and reference check
+
+Inspected README/package documentation contains general dataset/model labels (including ResNet-18, ImageNet, and a BreaKHis-style naming description) but no complete bibliographic reference list with sufficient author/title/year/DOI information. No references have been invented. Before manuscript submission, independently establish dataset provenance and cite the original dataset and architecture/pretraining sources from authoritative bibliographic records. Treat any citations later found in notebooks or documents as project-found references requiring bibliographic verification.

@@ -1,0 +1,7 @@
+# Dataset and split audit
+
+Manifest validation reports 806 ultrasound images (406 benign, 400 malignant), 1,246 histopathology images (623/623), and 1,000 chest X-ray images (500 Normal/500 Malignant). These are image counts, not patient counts. Dataset folder is `MultiModel Breast Cancer MSI Dataset`; provenance is not independently established by a source document in the inspected files. Do not label ultrasound BUSI provenance as confirmed solely from external detector test labels.
+
+Baseline saved splits: ultrasound 512/128/166, histopathology 796/200/250. Later histopathology split: 815/217/214 and explicitly different. The additional ultrasound report indicates same sample counts and refers to saved group-aware split, but verify exact split CSV identity before comparative claims.
+
+Validation summary: ultrasound 50 derived groups, 53 exact and 87 perceptual duplicate pairs; histopathology 51 derived groups, zero exact/perceptual duplicates; chest X-ray 1,000 groups and 113 perceptual duplicates. Group identifiers are filename-derived source stems / slide-like prefixes. These are heuristic source or slide groupings, not verified patient identifiers. Cross-split patient-level separation is unproven. Inclusion/exclusion is based on dataset folders/extensions and readable image checks; corrupt count reported zero. Actual person-level demographics, acquisition sites, and clinical provenance are not found in inspected manifests.
